@@ -1,3 +1,65 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>MPPKVVCL-Online Bill Payment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="layout/css/layout1.css" type="text/css">
+<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+<script src="layout/js/jquery.min.js"></script>
+<script src="layout/js/bootstrap.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<link rel="shortcut icon" href="favicon.ico">
+<style>
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mid {
+	float: right;
+}
+
+.alert {
+	text-align: center;
+}
+
+.form-group.required .control-label:after {
+	content: "*";
+	color: red;
+}
+
+#header #logo p {
+	font-size: 24px;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.zoom {
+	height: 200px; /* [1.1] Set it as per your need */
+	overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.zoom img {
+	transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.zoom:hover img {
+	transform: scale(1.1);
+}
+</style>
+</head>
 <body id="top">
 	
 	
@@ -29,8 +91,10 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
 				</button>
 
 			</div>
@@ -54,66 +118,97 @@
 	
 		<div class="text-center mt-2">
 
-			<div class="panel panel-primary" style="margin-left: 20px; margin-right: 20px">
+			<div class="panel panel-primary"
+				style="margin-left: 20px; margin-right: 20px">
 				<div class="panel-heading">Consumer Information</div>
 				<div class="panel-body">
 
 					<div class="form-row">
 						<div class="form-group col-md-4">
-							<label for="inputEmail4">IVRS</label> <input type="text" class="form-control" id="IVRS" placeholder="IVRS" disabled="disabled" value="1287015153">
+							<label for="inputEmail4">IVRS</label> <input type="text"
+								class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled" value="1287015153">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="inputPassword4">Consumer Name</label> <input type="text" class="form-control" placeholder="Consumer Name" value="KIRAN RAJENDRA GWALWANSHI" disabled="disabled">
+							<label for="inputPassword4">Consumer Name</label> <input
+								type="text" class="form-control" placeholder="Consumer Name"
+								value="KIRAN RAJENDRA GWALWANSHI" disabled="disabled">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="inputEmail4">Consumer Address</label> <input type="text" class="form-control" id="IVRS" placeholder="IVRS" disabled="disabled" value="BHARWELI BHARVELI BALAGHAT 9171195243 ">
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-group col-md-4">
-							<label for="inputPassword4">Bill Month</label> <input type="text" class="form-control" placeholder="Consumer Name" value="JUL-2023" disabled="disabled">
-						</div>
-						<div class="form-group col-md-4">
-							<label for="inputEmail4">Mobile Number</label> <input type="text" class="form-control" id="IVRS" placeholder="IVRS" disabled="disabled" value="917xxxxx43">
-						</div>
-						<div class="form-group col-md-4">
-							<label for="inputPassword4">Email Address</label> <input type="text" class="form-control" placeholder="Consumer Name" value="NA" disabled="disabled">
+							<label for="inputEmail4">Consumer Address</label> <input
+								type="text" class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled"
+								value="BHARWELI BHARVELI BALAGHAT 9171195243 ">
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-4">
-							<label for="inputEmail4">Bill Issue Date </label> <input type="email" class="form-control" id="inputEmail4" placeholder="Bill Issue Date" disabled="disabled" value="31-07-2023">
+							<label for="inputPassword4">Bill Month</label> <input type="text"
+								class="form-control" placeholder="Consumer Name"
+								value="JUL-2023" disabled="disabled">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="inputPassword4">Due Date</label> <input type="text" class="form-control" disabled="disabled" placeholder="Password" value="10-08-2023">
+							<label for="inputEmail4">Mobile Number</label> <input type="text"
+								class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled" value="917xxxxx43">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="inputEmail4">Bill Amount</label> <input type="text" class="form-control" id="inputEmail4" disabled="disabled" placeholder="Bill Amount" value="834.0">
+							<label for="inputPassword4">Email Address</label> <input
+								type="text" class="form-control" placeholder="Consumer Name"
+								value="NA" disabled="disabled">
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Bill Issue Date </label> <input
+								type="email" class="form-control" id="inputEmail4"
+								placeholder="Bill Issue Date" disabled="disabled"
+								value="31-07-2023">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Due Date</label> <input type="text"
+								class="form-control" disabled="disabled" placeholder="Password"
+								value="10-08-2023">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Bill Amount</label> <input type="text"
+								class="form-control" id="inputEmail4" disabled="disabled"
+								placeholder="Bill Amount" value="834.0">
 						</div>
 					</div>
 					<div class="form-row">
 
 						<div class="form-group col-md-4">
-							<label for="inputPassword4">Late Payment Surcharge</label> <input type="text" class="form-control" id="inputPassword4" placeholder="Current Surcharge" disabled="disabled" value="5.0">
+							<label for="inputPassword4">Late Payment Surcharge</label> <input
+								type="text" class="form-control" id="inputPassword4"
+								placeholder="Current Surcharge" disabled="disabled"
+								value="5.0">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="inputEmail4">Net Payable Amount</label> <input type="text" class="form-control" id="input4" disabled="disabled" placeholder="Bill Amount" style="background-color: rgb(184, 255, 248);" value="834.0">
+							<label for="inputEmail4">Net Payable Amount</label> <input
+								type="text" class="form-control" id="input4" disabled="disabled"
+								placeholder="Bill Amount"
+								style="background-color: rgb(184, 255, 248);"
+								value="834.0">
 						</div>
 					</div>
 
 					<form action="NGBReport" method="post">
-						<input type="hidden" name="ivrs" value="1287015153"> <input type="hidden" name="txtDate" value="20230701">
+						<input type="hidden" name='ivrs' value=1287015153 /> <input
+							type="hidden" name='txtDate' value=20230701 />
 						<div class="form-row" style="text-align: center;">
-							<button type="submit" class="btn btn-primary col-md-2 col-md-offset-5">Download
+							<button type="submit"
+								class="btn btn-primary col-md-2 col-md-offset-5">Download
 								Bill</button>
 
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="panel panel-primary" style="margin-left: 20px; margin-right: 20px">
+			<div class="panel panel-primary"
+				style="margin-left: 20px; margin-right: 20px">
 				<div class="panel-heading">Pay Energy Bill</div>
 				<div class="panel-body">
 					<form name="myform" id="myform" action="GetBill" method="post">
@@ -121,31 +216,47 @@
 						
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="inputEmail4">Mobile Number</label> <input type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile">
+								<label for="inputEmail4">Mobile Number</label> <input
+									type="text" class="form-control" id="mobile"
+									placeholder="Mobile" name="mobile">
 							</div>
 							<div class="form-group col-md-6">
-								<label for="inputPassword4">Email Address</label> <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+								<label for="inputPassword4">Email Address</label> <input
+									type="text" class="form-control" id="email" placeholder="Email"
+									name="email">
 							</div>
 						</div>
 						<div class="form-row">
-							<div class="form-group col-md-4 col-md-offset-4" style="text-align: center;">
-								<div class="g-recaptcha" data-sitekey="6LeH2hYcAAAAAFZvs1T2KenytBAOCYW5-7roP7xT" style="display: inline-block"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeH2hYcAAAAAFZvs1T2KenytBAOCYW5-7roP7xT&amp;co=aHR0cHM6Ly9iaWxsaW5nLm1wZXouY28uaW46NDQz&amp;hl=en-GB&amp;v=pCoGBhjs9s8EhFOHJFe8cqis&amp;size=normal&amp;cb=rmwy8f9ufutl" width="304" height="78" role="presentation" name="a-ydbvp1vjtwmt" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+							<div class="form-group col-md-4 col-md-offset-4"
+								style="text-align: center;">
+								<div class="g-recaptcha"
+									data-sitekey="6LeH2hYcAAAAAFZvs1T2KenytBAOCYW5-7roP7xT"
+									style="display: inline-block"></div>
 							</div>
 						</div>
-						<div class="form-row justify-content-md-center" style="text-align: center;">
-							<select id="paygw" name="paygw" style="margin-top: 15px; height: 35px" class="form-select form-select-lg mb-3 col-md-4 col-md-offset-4" placeholder="Select Payment Gateway">
+						<div class="form-row justify-content-md-center"
+							style="text-align: center;">
+							<select id="paygw" name="paygw"
+								style="margin-top: 15px; height: 35px"
+								class="form-select form-select-lg mb-3 col-md-4 col-md-offset-4"
+								placeholder="Select Payment Gateway">
 								<option value="">Select Payment Gateway....</option>
 								<option value="HDFC">Pay through HDFC Bank Ltd (No Transaction Charges)</option>
 								<option value="billdesk">Pay through Bill Desk</option>
 								<option value="paytm">Pay through Paytm</option>
 							</select> <br>
 							<div class="form-group">
-								<button type="submit" id="submit" class="btn btn-primary col-md-2 col-md-offset-5" style="margin-top: 15px">Pay Now</button>
+								<button type="submit" id="submit"
+									class="btn btn-primary col-md-2 col-md-offset-5"
+									style="margin-top: 15px">Pay Now</button>
 							</div>
 						</div>
 					</form>
-					<div class="row justify-content-md-center" style="margin-top: 20px; text-align: center">
-						<button type="button" class="btn btn-link  col-md-2 col-md-offset-5" data-toggle="modal" data-target="#myModal">View Payment
+					<div class="row justify-content-md-center"
+						style="margin-top: 20px; text-align: center">
+						<button type="button"
+							class="btn btn-link  col-md-2 col-md-offset-5"
+							data-toggle="modal" data-target="#myModal">View Payment
 							Charges</button>
 					</div>
 					<!-- Modal -->
@@ -153,7 +264,7 @@
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">×</button>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
 									<h4 class="modal-title">Payment Charges</h4>
 								</div>
 								<div class="modal-body">
@@ -203,7 +314,8 @@
 									</table>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal">Close</button>
 								</div>
 							</div>
 						</div>
@@ -213,13 +325,13 @@
 			</div>
 		</div>
 	</div>
-	<span class="fixed-bottom">
+	<span class=fixed-bottom >
 <footer class="container-fluid">
 <div class="wrapper col7">
   <div id="copyright">
-    <p align="center">Copyright © 2023 - All Rights Reserved - <a href="http://www.mpez.co.in/">MPPKVVCL, Jabalpur</a></p>
-    <p align="center">Developed by <a target="_blank" href="http://www.mpez.co.in/" title="MPPKVVCL">O/o Chief(CS&amp;A), Jabalpur</a></p>
-    <br class="clear">
+    <p align="center">Copyright &copy; 2023 - All Rights Reserved - <a href="http://www.mpez.co.in/">MPPKVVCL, Jabalpur</a></p>
+    <p align="center">Developed by <a target="_blank" href="http://www.mpez.co.in/" title="MPPKVVCL">O/o Chief(CS&A), Jabalpur</a></p>
+    <br class="clear" />
   </div>
 </div>
 </footer>
@@ -227,7 +339,7 @@
 
 
 	
-
+</body>
 <script>
 	function DoSubmit() {
 		document.myform.paygw.value = '1';
@@ -266,4 +378,4 @@
 						}
 					});
 </script>
-<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" src="https://www.google.com/recaptcha/api2/bframe?hl=en-GB&amp;v=pCoGBhjs9s8EhFOHJFe8cqis&amp;k=6LeH2hYcAAAAAFZvs1T2KenytBAOCYW5-7roP7xT" name="c-ydbvp1vjtwmt" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body>
+</html>
