@@ -1,0 +1,381 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>MPPKVVCL-Online Bill Payment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="layout/css/layout1.css" type="text/css">
+<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+<script src="layout/js/jquery.min.js"></script>
+<script src="layout/js/bootstrap.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<link rel="shortcut icon" href="favicon.ico">
+<style>
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mid {
+	float: right;
+}
+
+.alert {
+	text-align: center;
+}
+
+.form-group.required .control-label:after {
+	content: "*";
+	color: red;
+}
+
+#header #logo p {
+	font-size: 24px;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.zoom {
+	height: 200px; /* [1.1] Set it as per your need */
+	overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.zoom img {
+	transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.zoom:hover img {
+	transform: scale(1.1);
+}
+</style>
+</head>
+<body id="top">
+	
+	
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:75px;
+}
+</style>
+<div class="container">
+    <div class="row">
+      <div id="header">
+    	<div id="logo"> 
+        <div class="col-md-1">
+            <img src="logo.jpg" class="center">
+        </div>
+        <div class="col-md-11" style="text-align: center;">
+        <h1>Madhya Pradesh Poorv Kshetra Vidyut Vitaran Company Ltd.</h1>  
+        <p>Online Bill Payment System</p>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<br>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="instantbill.jsp">Instant Bill</a></li>
+					<li><a href="duprecpt.jsp">Payment History</a></li>				    			    
+				</ul>
+				<ul class="nav navbar-nav navbar-right">			       
+			        <li><a href="contact.jsp">Contact Us</a></li>	
+			        <li><a href="index.jsp">Logout</a></li>
+			    </ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+	
+	<div class="container">
+	<marquee><a href="https://mpez.co.in/ShowProperty/UCMRepository/Contribution%20Folders/Jabalpur/pdf/TariffOrder-FY-2023-24.pdf">New Tariff Order 2023-24</a></marquee>
+	
+		<div class="text-center mt-2">
+
+			<div class="panel panel-primary"
+				style="margin-left: 20px; margin-right: 20px">
+				<div class="panel-heading">Consumer Information</div>
+				<div class="panel-body">
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">IVRS</label> <input type="text"
+								class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled" value="1287015153">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Consumer Name</label> <input
+								type="text" class="form-control" placeholder="Consumer Name"
+								value="KIRAN RAJENDRA GWALWANSHI" disabled="disabled">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Consumer Address</label> <input
+								type="text" class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled"
+								value="BHARWELI BHARVELI BALAGHAT 9171195243 ">
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Bill Month</label> <input type="text"
+								class="form-control" placeholder="Consumer Name"
+								value="JUL-2023" disabled="disabled">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Mobile Number</label> <input type="text"
+								class="form-control" id="IVRS" placeholder="IVRS"
+								disabled="disabled" value="917xxxxx43">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Email Address</label> <input
+								type="text" class="form-control" placeholder="Consumer Name"
+								value="NA" disabled="disabled">
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Bill Issue Date </label> <input
+								type="email" class="form-control" id="inputEmail4"
+								placeholder="Bill Issue Date" disabled="disabled"
+								value="31-07-2023">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Due Date</label> <input type="text"
+								class="form-control" disabled="disabled" placeholder="Password"
+								value="10-08-2023">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Bill Amount</label> <input type="text"
+								class="form-control" id="inputEmail4" disabled="disabled"
+								placeholder="Bill Amount" value="834.0">
+						</div>
+					</div>
+					<div class="form-row">
+
+						<div class="form-group col-md-4">
+							<label for="inputPassword4">Late Payment Surcharge</label> <input
+								type="text" class="form-control" id="inputPassword4"
+								placeholder="Current Surcharge" disabled="disabled"
+								value="5.0">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputEmail4">Net Payable Amount</label> <input
+								type="text" class="form-control" id="input4" disabled="disabled"
+								placeholder="Bill Amount"
+								style="background-color: rgb(184, 255, 248);"
+								value="834.0">
+						</div>
+					</div>
+
+					<form action="NGBReport" method="post">
+						<input type="hidden" name='ivrs' value=1287015153 /> <input
+							type="hidden" name='txtDate' value=20230701 />
+						<div class="form-row" style="text-align: center;">
+							<button type="submit"
+								class="btn btn-primary col-md-2 col-md-offset-5">Download
+								Bill</button>
+
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="panel panel-primary"
+				style="margin-left: 20px; margin-right: 20px">
+				<div class="panel-heading">Pay Energy Bill</div>
+				<div class="panel-body">
+					<form name="myform" id="myform" action="GetBill" method="post">
+						<input type="hidden" name="ivrs" value="N1287015153">
+						
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputEmail4">Mobile Number</label> <input
+									type="text" class="form-control" id="mobile"
+									placeholder="Mobile" name="mobile">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputPassword4">Email Address</label> <input
+									type="text" class="form-control" id="email" placeholder="Email"
+									name="email">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-4 col-md-offset-4"
+								style="text-align: center;">
+								<div class="g-recaptcha"
+									data-sitekey="6LeH2hYcAAAAAFZvs1T2KenytBAOCYW5-7roP7xT"
+									style="display: inline-block"></div>
+							</div>
+						</div>
+						<div class="form-row justify-content-md-center"
+							style="text-align: center;">
+							<select id="paygw" name="paygw"
+								style="margin-top: 15px; height: 35px"
+								class="form-select form-select-lg mb-3 col-md-4 col-md-offset-4"
+								placeholder="Select Payment Gateway">
+								<option value="">Select Payment Gateway....</option>
+								<option value="HDFC">Pay through HDFC Bank Ltd (No Transaction Charges)</option>
+								<option value="billdesk">Pay through Bill Desk</option>
+								<option value="paytm">Pay through Paytm</option>
+							</select> <br>
+							<div class="form-group">
+								<button type="submit" id="submit"
+									class="btn btn-primary col-md-2 col-md-offset-5"
+									style="margin-top: 15px">Pay Now</button>
+							</div>
+						</div>
+					</form>
+					<div class="row justify-content-md-center"
+						style="margin-top: 20px; text-align: center">
+						<button type="button"
+							class="btn btn-link  col-md-2 col-md-offset-5"
+							data-toggle="modal" data-target="#myModal">View Payment
+							Charges</button>
+					</div>
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Payment Charges</h4>
+								</div>
+								<div class="modal-body">
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col">#</th>
+												<th scope="col">Mode of Payment</th>
+												<th scope="col">BillDesk</th>
+												<th scope="col">Paytm</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Credit Card [Visa, Master Card, Amex,
+													Diners]/Standing instructions on Credit Card</td>
+												<td>0.80% of transaction amount</td>
+												<td>0.80% of transaction amount</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Debit Card [Visa, Master Card and Rupay]</td>
+												<td>0.60% of transaction amount</td>
+												<td>0.60% of transaction amount</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td>UPI (Unified Payment Interface)</td>
+												<td>Nil</td>
+												<td>Nil</td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<td>Net Banking/EBPP/NACH/USSD/AEPS/Mobile Banking,
+													Micro ATM's etc</td>
+												<td>Rs. 6.00 per transaction</td>
+												<td>Rs. 6.00 per transaction</td>
+											</tr>
+											<tr>
+												<th scope="row">5</th>
+												<td>Wallets/Cash Cards/Pre-Paid Cards</td>
+												<td>Rs. 20 per transaction</td>
+												<td>Rs. 20 per transaction</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<span class=fixed-bottom >
+<footer class="container-fluid">
+<div class="wrapper col7">
+  <div id="copyright">
+    <p align="center">Copyright &copy; 2023 - All Rights Reserved - <a href="http://www.mpez.co.in/">MPPKVVCL, Jabalpur</a></p>
+    <p align="center">Developed by <a target="_blank" href="http://www.mpez.co.in/" title="MPPKVVCL">O/o Chief(CS&A), Jabalpur</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</footer>
+</span>
+
+
+	
+</body>
+<script>
+	function DoSubmit() {
+		document.myform.paygw.value = '1';
+		return true;
+	}
+
+	$('#myform')
+			.submit(
+					function() {
+						var paygw = $.trim($('#paygw').val());
+						var amount = $('#input4').val();
+						var advamt = $('#advamt').val();
+						//alert(amount);
+						//alert(advamt);
+						if (amount == 0) {
+							if (advamt < 2) {
+								$("#advamt").focus();
+								$('#advamt').css('border-color', 'red');
+								$('#advamt')
+										.after(
+												'<div class="red">Correct Advance Payment Amount Required</div>');
+								return false;
+							}
+							if (advamt == 'NaN') {
+								$("#advamt").focus();
+								$('#advamt').css('border-color', 'red');
+								$('#advamt')
+										.after(
+												'<div class="red">Advance Payment Amount Required</div>');
+								return false;
+							}
+						}
+						if (paygw === '') {
+							alert('Please Select Payment Gateway');
+							return false;
+						}
+					});
+</script>
+</html>
